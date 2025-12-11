@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Energy Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Humara JS file yahin link ho raha hai -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Smart Energy Tracker ⚡</h1>
+    <p>Track your electricity usage and save energy efficiently!</p>
+  </header>
+
+  <main class="container">
+    <!-- LOGIN SECTION -->
+    <section id="login-section" class="card">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Enter your name" />
+      <button id="login-btn">Login</button>
+    </section>
+
+    <!-- DASHBOARD SECTION (start me hidden rahega) -->
+    <section id="dashboard-section" class="card hidden">
+      <h2>Welcome, <span id="user-name"></span> 👋</h2>
+
+      <h3>Add Appliance Usage</h3>
+      <input type="text" id="appliance-name" placeholder="Appliance Name (e.g. Fan)" />
+      <input type="number" id="power" placeholder="Power (Watts)" />
+      <input type="number" id="hours" placeholder="Hours Used per Day" />
+      <button id="add-btn">Add Appliance</button>
+
+      <h3>Appliance List</h3>
+      <table id="appliance-table">
+        <thead>
+          <tr>
+            <th>Appliance</th>
+            <th>Power (W)</th>
+            <th>Hours/Day</th>
+            <th>Energy (kWh/day)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JS se rows yahan add hongi -->
+        </tbody>
+      </table>
+
+      <div id="summary" class="summary">
+        <p><b>Total Energy:</b> <span id="total-energy">0</span> kWh/day</p>
+        <p><b>Estimated Monthly Bill:</b> ₹<span id="bill">0</span></p>
+      </div>
+
+      <button id="logout-btn">Logout</button>
+    </section>
+  </main>
+</body>
+</html>
